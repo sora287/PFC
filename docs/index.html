@@ -1,47 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
- <link rel="stylesheet" href="style.css">
- <script src="script.js"></script>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
+
+<body>
 <div class="sim">
-<h2>PFC</h2>
-<div class="sim-setting">
- <div class="sim-setting-box">
-  <p class="sim-setting-head">毎月の積立額</p>
-  <div class="sim-setting-input">
-   <p id="baseSub" class="sim-setting-input-btn">-</p>
-   <input id="base" type="number" name="base" value="" oninput="sliceMaxLength(this, 6)">
-   <p id="baseAdd" class="sim-setting-input-btn">+</p>
-   <p class="sim-setting-input-unit">円</p>
-  </div>
- </div>
+  <h2>資産運用シミュレータ（複利計算）</h2>
+  <div class="sim-setting">
+    <div class="sim-setting-box">
+      <p class="sim-setting-head">毎月の積立額</p>
+      <div class="sim-setting-input">
+        <p id="baseSub" class="sim-setting-input-btn">-</p>
+        <input id="base" type="number" name="base" value="" oninput="sliceMaxLength(this, 6)">
+        <p id="baseAdd" class="sim-setting-input-btn">+</p>
+        <p class="sim-setting-input-unit">円</p>
+      </div>
+    </div>
+    <div class="sim-setting-box">
+      <p class="sim-setting-head">想定年利回り</p>
+      <div class="sim-setting-input">
+        <p id="rateSub" class="sim-setting-input-btn">-</p>
+        <input id="rate" type="number" name="rate" value="" oninput="sliceMaxLength(this, 2)">
+        <p id="rateAdd" class="sim-setting-input-btn">+</p>
+        <p class="sim-setting-input-unit">%</p>
+      </div>
+    </div>
+    <div class="sim-setting-box">
+      <p class="sim-setting-head">運用期間</p>
+      <div class="sim-setting-input">
+        <select id="duration">
+          <option value="5">5年</option>
+          <option value="10">10年</option>
+          <option value="15">15年</option>
+          <option value="20">20年</option>
+          <option value="25">25年</option>
+          <option value="30">30年</option>
+        </select>
+      </div>
+    </div>
 
- <div class="sim-setting-box">
-  <p class="sim-setting-head">想定年利回り</p>
-  <div class="sim-setting-input">
-   <p id="rateSub" class="sim-setting-input-btn">-</p>
-   <input id="rate" type="number" name="rate" value="" oninput="sliceMaxLength(this, 2)">
-   <p id="rateAdd" class="sim-setting-input-btn">+</p>
-   <p class="sim-setting-input-unit">%</p>
+    <div class="sim-setting-condition">
+      <p>入力条件</p>
+      <ul>
+        <li>毎月の積立額: 整数 / 範囲: 0円〜999,999円 / ボタン: &#177;&#0165;10,000</li>
+        <li>想定年利回り: 整数 / 範囲: 0%〜99% / ボタン: &#177; 1%</li>
+        <li>運用期間: 5年、10年、15年、25年、30年から選択</li>
+      </ul>
+    </div>
   </div>
- </div>
 
- <div class="sim-setting-box">
-  <p class="sim-setting-head">運用期間</p>
-  <div class="sim-setting-input">
-   <select id="duration">
-    <option value="5">5年</option>
-    <option value="10">10年</option>
-    <option value="15">15年</option>
-    <option value="20">20年</option>
-    <option value="25">25年</option>
-    <option value="30">30年</option>
-   </select>
+  <div class="sim-result">
+    <p class="sim-result-head">試算結果</p>
+    <table id="result"></table>
   </div>
- </div>
+
+  <div class="sim-remarks">
+    <ul>
+      <li>「<b>合計資産 = 毎月の積立額 &#0215; 12ヶ月 &#0215; (1 + 想定年利回り)^運用期間</b>」で算出しています。</li>
+      <li>実際の資産運用では、税金、手数料等が差し引かれる為、試算結果と実際の資産推移は異なります。</li>
+      <li>為替の変動、利回りの変動は考慮されていません。</li>
+      <li>本シミュレータ結果の利用に伴う損害については、当サイト及び当サイトの管理者は一切の責任を負うものではありません。</li>
+    </ul>
+  </div>
 </div>
 
-<div class="sim-result">
- <p class="sim-result-head">試算結果</p>
- <table id="result"></table>
-</div>
-</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
