@@ -1,0 +1,131 @@
+@charset "utf-8";
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.sim {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 24px 12px;
+  border: 3px solid #31B6A0;
+  border-radius: 5vh;
+}
+
+.sim h2 {
+  width: fit-content;
+  margin: 0 auto 18px;
+  padding: 0 12px 3px 16px;
+  border-bottom: 2px solid #FFDA2A;
+  font-size: 20px;
+  font-weight: inherit;
+}
+
+.sim-setting {
+  width: fit-content;
+  margin: 0 auto 42px;
+}
+.sim-setting-box {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.sim-setting-head {
+  margin-right: 12px;
+}
+.sim-setting-input {
+  display: flex;
+  align-items: center;
+}
+.sim-setting-input input {
+  margin: 0;
+  padding: 8px 6px;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  text-align: center;
+}
+.sim-setting-input input[name="base"] {
+  width: 70px;
+}
+.sim-setting-input input[name="rate"] {
+  width: 40px;
+}
+.sim-setting-input input::-webkit-inner-spin-button,
+.sim-setting-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
+}
+.sim-setting-input-btn {
+  margin: 0;
+  padding: 6.5px 12px;
+  background-color: #F5F5F5;
+  border: 1px solid #555;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+.sim-setting-input-unit {
+  margin-left: 6px;
+}
+.sim-setting-input select {
+  width: 60px;
+  padding: 8px 10px 8px 0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+}
+.sim-setting-box:nth-child(3) .sim-setting-input {
+  position: relative;
+}
+.sim-setting-box:nth-child(3) .sim-setting-input::after {
+  width: 6px;
+  height: 6px;
+  content: '';
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.sim-result-head {
+  width: fit-content;
+  margin: 0 auto 12px;
+  padding: 0 12px 3px;
+  border-bottom: 2px solid #4977BC;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.sim-result table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.sim-result table th {
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+.sim-result table td {
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid #4977BC;
+  font-size: 14px;
+  text-align: right;
+}
+.sim-result table td:first-child {
+  text-align: left;
+}
+.sim-result table td:last-child {
+  color: #FF0000;
+}
+.sim-result table tr:nth-child(5n+1) td {
+  background-color: #EF8BB655;
+}
