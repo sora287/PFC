@@ -79,7 +79,7 @@ body {
   cursor: pointer;
   appearance: none;
 }
-.sim-setting-box:nth-child(3) .sim-setting-input {
+.sim-setting-box:nth-child(1) .sim-setting-input {
   position: relative;
 }
 .sim-setting-box:nth-child(3) .sim-setting-input::after {
