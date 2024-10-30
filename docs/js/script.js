@@ -1,5 +1,5 @@
 // 初期設定
-const initial_base = 30000;
+const initial_base = 80;
 const initial_rate = 5;
 const initial_duration = $('#duration').val();
 
