@@ -54,7 +54,7 @@ $(function() {
 	$('#baseAdd').on('click', function() {
 		$('#result').empty();
 		if(base < 990000) {
-			base += 10000;
+			base += 0.1;
 		} else {
 			base = 999999;
 		}
