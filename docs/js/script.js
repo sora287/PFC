@@ -56,7 +56,7 @@ $(function() {
 		if(base < 990000) {
 			base += 0.1;
 		} else {
-			base = 999999;
+			base = 1;
 		}
 		$('#base').val(base);
 		resultCalc();
