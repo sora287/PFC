@@ -43,10 +43,10 @@ resultCalc();
 $(function() {
 	$('#baseSub').on('click', function() {
 		$('#result').empty();
-		if(base < 10000) {
+		if(base < 0.1) {
 			base = 0;
 		} else {
-			base -= 10000;
+			base -= 0.1;
 		}
 		$('#base').val(base);
 		resultCalc();
